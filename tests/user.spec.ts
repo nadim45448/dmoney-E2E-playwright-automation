@@ -1,0 +1,11 @@
+import { test, expect, Page } from "@playwright/test";
+import { LoginPage } from "../page/login";
+import { getLastUser } from "../utils/utils";
+
+test("User can login with valid creds", async ({ page }) => {
+    await page.goto("https://dmoneyportal.roadtocareer.net/login");
+    const loginPage = new LoginPage(page);
+    const userData = getLastUser("./resources/users.json");
+    await loginPage.login(userData.email, userData.password);
+
+})
