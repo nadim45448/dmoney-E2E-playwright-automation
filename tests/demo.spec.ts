@@ -64,3 +64,5 @@ test("Create new user", async () => {
     await page.getByRole('button', { name: 'Create User' }).click();
     await page.pause();
 })
+
+// Next: convert this file into OOP
