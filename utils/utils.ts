@@ -6,7 +6,7 @@ export function generateRandomNumber(min: number, max: number):number {
     return Math.floor(randomNumber);
 
 }
-export function saveJsonData(jsonObject: Object, fileUrl: string):void {
+export function saveJsonData(jsonObject: object, fileUrl: string):void {
     let userDataArray: object[] = [];
     if (fs.existsSync(fileUrl)) {
         const fileContent = fs.readFileSync(fileUrl, "utf-8"); // read JSON array
